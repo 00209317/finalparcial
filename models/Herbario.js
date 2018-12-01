@@ -2,9 +2,9 @@ const moongose = require('mongoose');
 const {Schema} = moongose;
 
 const herbariosSchema = new Schema({
-    materia: {type: String},
-    uv: {type: String},
-    descripcion: {type: String}
+    nombre: {type: String},
+    familia: {type: String},
+    anio: {type: String}
 });
 
 
