@@ -6,7 +6,7 @@ document.forms.crud = addEventListener("submit", function(e){
         familia: document.querySelector('#familia').value,
         anio: document.querySelector('#anio').value
     }
-    let url = '/herbarios';
+    let url = '/herbario';
     fetch(url,{
         method:"POST",
         body:JSON.stringify(data),

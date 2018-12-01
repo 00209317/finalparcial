@@ -1,11 +1,11 @@
-const moongose = require('mongoose');
-const {Schema} = moongose;
+const mongoose = require('mongoose');
+const {Schema} = mongoose;
 
 const herbariosSchema = new Schema({
     nombre: {type: String},
     familia: {type: String},
-    anio: {type: String}
+    anio: {type: Date}
 });
 
 
-module.exports = moongose.model('herbarios', herbariosSchema);
+module.exports = mongoose.model('herbarios', herbariosSchema);

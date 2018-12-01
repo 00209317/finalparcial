@@ -1,8 +1,8 @@
-const moongose = require ('mongoose');
-const {mongodb} = require('./keys');
+const mongoose = require('mongoose');
+const { mongodb } = require('./keys');
 
-moongose.connect(mongodb.URI,{
-    useNewUrlParser:true,
-    useCreateIndex:true
+mongoose.connect(mongodb.URI, {
+    useNewUrlParser: true,
+    useCreateIndex: true
 })
-.then(db => console.log('Conexion succesful').catch(err => console.log(err)));
+    .then(db => console.log('Conexion succesful').catch(err => console.log(err)));
