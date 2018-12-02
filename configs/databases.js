@@ -4,5 +4,4 @@ const { mongodb } = require('./keys');
 mongoose.connect(mongodb.URI, {
     useNewUrlParser: true,
     useCreateIndex: true
-})
-    .then(db => console.log('Conexion succesful').catch(err => console.log(err)));
+}).then(db => console.log('Conexion succesful'));
