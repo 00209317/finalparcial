@@ -12,7 +12,7 @@ document.forms.crud = addEventListener("submit", function(e){
         body:JSON.stringify(data),
         headers:{
             'content-type':'application/json'
-        }.then(res => res.JSON()).catch(error => res.JSON({error:error})).then(responde => {
+        }.then(res => res.json()).catch(error => res.json({error:error})).json(responde => {
             alert("Insertado Correctamente");
         })
     })

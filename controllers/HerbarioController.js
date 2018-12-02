@@ -12,7 +12,7 @@ herbarioController.index = async function (req, res, next) {
 };
 
 
-herbarioController.store = async function (req, res, next) {
+herbarioController.insert = async function (req, res, next) {
     let h = new herbario();
     h.nombre = req.body.nombre;
     h.familia = req.body.familia;
@@ -24,8 +24,18 @@ herbarioController.store = async function (req, res, next) {
     } catch (error) {
         return res.status(500).json({ error: error });
     }
+
 };
 
+herbarioController.delete = async function (req, res){
+    let {id} = req.params;
+    try {
+        await herbario.remove({_id:id});
+        return res.status(200).json({ h });
+    } catch (error) {
+        return res.status(500).json({ error: error });
+    }
+}
 
 
 
